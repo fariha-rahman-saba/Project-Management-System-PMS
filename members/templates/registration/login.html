@@ -4,11 +4,12 @@
 
     
 
-<h1>Login...</h1>
-<br/><br/>
 
-<div class="form-group">
-	<form method="Project">
+
+<div class="form-group w-50 mx-auto">
+<h1 class="mb-5">Login...</h1>
+
+	<form method="POST">
 		{% csrf_token %}
 		
 <div class="form-group">
@@ -22,12 +23,13 @@
   </div>
 
 <br/>
-		<button class="btn btn-secondary">Login</button>
+		<button class="btn btn-secondary mb-5">Login</button> <br>
+  Not Registered? Sign Up <a href="{% url 'register' %}">Here...</a>
+
 </div>
 </form>
 <br/>
 
-Not Registered? Sign Up <a href="{% url 'register' %}">Here...</a>
 
 
 
