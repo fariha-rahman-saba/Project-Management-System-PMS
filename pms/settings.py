@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'members',
     'projectmanagement',
     'ckeditor',
+    'django_bootstrap_icons',
 ]
 
 MIDDLEWARE = [
