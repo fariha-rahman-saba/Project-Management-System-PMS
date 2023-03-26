@@ -1,13 +1,6 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
-{% load bootstrap_icons %}
-
-{% block title %}
-Argon - Home
-{% endblock %}
-
 {% block content %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,212 +9,208 @@ Argon - Home
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles/home.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 
 <body>
-    
-<main>
-            <section>
-                <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+
+
+    <main>
+        <section>
+            <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" id="home">
+                    <div class="carousel-item active">
+                        <img src="{% static 'projects/images/banner-1.jpg' %} " class="d-block w-100" alt="..." />
                     </div>
-                    <div class="carousel-inner" id="home">
-                        <div class="carousel-item active">
-                            <img src="{% static 'projects/images/banner-1.jpg' %} " class="d-block w-100" alt="..." />
-                        </div>
-                        <div class=" carousel-item">
-                            <img src="{% static 'projects/images/banner-2.jpg' %}" class="d-block w-100" alt="..." />
-                        </div>
-            
-                        <div class="carousel-item">
-                            <img src="{% static 'projects/images/banner-3.jpg' %}" class="d-block w-100" alt="..." />
-                        </div>
+                    <div class=" carousel-item">
+                        <img src="{% static 'projects/images/banner-2.jpg' %}" class="d-block w-100" alt="..." />
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-            
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    <div
-                        class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center h-50">
-                        <h1 class="text-dark fs-1 fw-bold">The perfect collaboration of your projects</h1>
-                        <p class="text-dark">Join with us and get the best experience</p>
-            
+
+                    <div class="carousel-item">
+                        <img src="{% static 'projects/images/banner-3.jpg' %}" class="d-block w-100" alt="..." />
                     </div>
                 </div>
-            </section>
-            <!-- Facilities Section -->
-            
-            <section class="container " id="features">
-                <h1 class="text-center fw-bold mb-5 mt-5">Best Facilities We Provide</h1>
-                <p class="text-center mb-5">
-                    Whether you are creating a project, collaborating with your team members its the best place
-                    to save. We are providing you competitive place with facilities of CSS, HTML, Bootstrap, Django, Python
-                    etc.
-                    to create your frontend, backend and database.
-                </p>
-                <div class="row gx-5 gy-5">
-                    <div class=" col-lg-4 ">
-                        <img width="380px" height="250px" src="{% static 'projects/images/Django.png' %}" alt="">
-                        <h5 class="text-center mt-2">Django Project</h5>
-                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <div
+                    class="carousel-caption d-none d-md-block d-flex flex-column justify-content-center align-items-center h-50">
+                    <h1 class="text-dark fs-1 fw-bold">The perfect collaboration of your projects</h1>
+                    <p class="text-dark">Join with us and get the best experience</p>
+
+                </div>
+            </div>
+        </section>
+        <!-- Facilities Section -->
+
+        <section class="container " id="features">
+            <h1 class="text-center fw-bold mb-5 mt-5">Best Facilities We Provide</h1>
+            <p class="text-center mb-5">
+                Whether you are creating a project, collaborating with your team members its the best place
+                to save. We are providing you competitive place with facilities of CSS, HTML, Bootstrap, Django, Python
+                etc.
+                to create your frontend, backend and database.
+            </p>
+            <div class="row gx-5 gy-5">
+                <div class=" col-lg-4 ">
+                    <img width="380px" height="250px" src="{% static 'projects/images/Django.png' %}" alt="">
+                    <h5 class="text-center mt-2">Django Project</h5>
+                </div>
+                <div class="col-lg-4 ">
+                    <img width="380px" height="250px" src="{% static 'projects/images/React.png' %}" alt="">
+                    <h5 class="text-center mt-2">React Project</h5>
+                </div>
+                <div class="col-lg-4">
+                    <img width="380px" height="250px" src="{% static 'projects/images/Angular.png' %}" alt="">
+                    <h5 class="text-center mt-2">Angular Project</h5>
+                </div>
+
+                <div class="col-lg-4 ">
+                    <img width="380px" height="250px" src="{% static 'projects/images/Bootstrap.png' %}" alt="">
+                    <h5 class="text-center mt-2">Bootstrap Project</h5>
+                </div>
+                <div class="col-lg-4">
+                    <img width="380px" height="250px" src="{% static 'projects/images/javascript.png' %}" alt="">
+                    <h5 class="text-center mt-2">Javascript Project</h5>
+                </div>
+                <div class="col-lg-4">
+                    <img width="380px" height="250px" src="{% static 'projects/images/java.png' %}" alt="">
+                    <h5 class="text-center mt-2">Java Project</h5>
+                </div>
+
+
+                <div class="text-center mt-2 mb-2">
+                    <a href="https://web.programming-hero.com/" target="_blank"
+                        class="btn btn-primary rounded px-5 py-2"><small>See
+                            More</small></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Package section -->
+
+        <section class="container mt-5 mb-5 text-center m-auto" id="pricing">
+
+            <h3 class="text-center mb-5 fw-bold">Our Packages</h3>
+            <div>
+                <div class="row">
                     <div class="col-lg-4 ">
-                        <img width="380px" height="250px" src="{% static 'projects/images/React.png' %}" alt="">
-                        <h5 class="text-center mt-2">React Project</h5>
-                    </div>
-                    <div class="col-lg-4">
-                        <img width="380px" height="250px" src="{% static 'projects/images/Angular.png' %}" alt="">
-                        <h5 class="text-center mt-2">Angular Project</h5>
-                    </div>
-            
-                    <div class="col-lg-4 ">
-                        <img width="380px" height="250px" src="{% static 'projects/images/Bootstrap.png' %}" alt="">
-                        <h5 class="text-center mt-2">Bootstrap Project</h5>
-                    </div>
-                    <div class="col-lg-4">
-                        <img width="380px" height="250px" src="{% static 'projects/images/javascript.png' %}" alt="">
-                        <h5 class="text-center mt-2">Javascript Project</h5>
-                    </div>
-                    <div class="col-lg-4">
-                        <img width="380px" height="250px" src="{% static 'projects/images/java.png' %}" alt="">
-                        <h5 class="text-center mt-2">Java Project</h5>
-                    </div>
-            
-            
-                    <div class="text-center mt-2 mb-2">
-                        <a href="https://web.programming-hero.com/" target="_blank"
-                            class="btn btn-primary rounded px-5 py-2"><small>See
-                                More</small></a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Package section -->
-            
-            <section class="container mt-5 mb-5 text-center m-auto" id="pricing">
-            
-                <h3 class="text-center mb-5 fw-bold">Our Packages</h3>
-                <div>
-                    <div class="row">
-                        <div class="col-lg-4 ">
-                            <div class="card border-0 ">
-                                <div class="card-body">
-            
-                                    <h3 class="fw-bold">$0</h3>
-                                    <h4 class="fw-bold">Free</h4>
-                                    <p class="text-muted">
-                                        <small> For students in academic studies.<br> <br>
-                                            <i class="far fa-check-circle text-primary"></i> Limited space access <br>
-                                            <i class="far fa-check-circle text-primary"></i> Secuirty facility<br>
-                                            <br>
-                                        </small>
-                                    </p>
-                                    <a href="#"
-                                        class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-4"><small>Choose
-                                            plan</small></a>
-                                </div>
+                        <div class="card border-0 ">
+                            <div class="card-body">
+
+                                <h3 class="fw-bold">$0</h3>
+                                <h4 class="fw-bold">Free</h4>
+                                <p class="text-muted">
+                                    <small> For students in academic studies.<br> <br>
+                                        <i class="far fa-check-circle text-primary"></i> Limited space access <br>
+                                        <i class="far fa-check-circle text-primary"></i> Secuirty facility<br>
+                                        <br>
+                                    </small>
+                                </p>
+                                <a href="#"
+                                    class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-4"><small>Choose
+                                        plan</small></a>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="card border-0">
-                                <div class="card-body">
-            
-                                    <h3 class="fw-bold">$500</h3>
-                                    <h4 class="fw-bold">Professional</h4>
-                                    <p class="text-muted">
-                                        <small> For most projects with premium plans. <br> <br>
-                                            <i class="far fa-check-circle text-primary"></i> Full space access <br>
-            
-                                            <i class="far fa-check-circle text-primary"></i> Management support<br>
-            
-                                            <i class="far fa-check-circle text-primary"></i> Billed as shift
-                                        </small>
-                                    </p>
-                                    <a href="#"
-                                        class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-4"><small>Choose
-                                            plan</small></a>
-                                    <span
-                                        class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger p-2">
-                                        Hot
-            
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card border-0 " id="hot-package">
-                                <div class="card-body">
-            
-                                    <h3 class="fw-bold">$800</h3>
-                                    <h4 class="fw-bold">Enterprise</h4>
-                                    <p>
-                                        <small> For most enterprise projects. <br> <br>
-                                            <i class="far fa-check-circle"></i> Full space access<br>
-                                            <i class="far fa-check-circle"></i> Dedicated team<br>
-            
-                                            <i class="far fa-check-circle"></i> Premium Facilities<br>
-                                            <i class="far fa-check-circle"></i> Pay as plan
-            
-                                        </small>
-                                    </p>
-                                    <a href="#"
-                                        class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-2"><small>Choose
-                                            plan</small></a>
-            
-            
-            
-                                </div>
-                            </div>
-                        </div>
-            
-            
                     </div>
-                </div>
-            </section>
-            
-            <!-- Newsletter -->
-            
-            <section style="height:300px " class="rounded-3 d-flex justify-content-center align-items-center bg-warning mb-4"
-                id="subscribe">
-                <div class="mt-5 mb-5">
-                    <h2 class="text-white">Subscribe for Newsletter</h2>
-                    <p class="text-white">Get updates on special offers and more</p>
-                    <form>
-                        <div class="mb-1">
-            
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="Email">
-            
+                    <div class="col-lg-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+
+                                <h3 class="fw-bold">$500</h3>
+                                <h4 class="fw-bold">Professional</h4>
+                                <p class="text-muted">
+                                    <small> For most projects with premium plans. <br> <br>
+                                        <i class="far fa-check-circle text-primary"></i> Full space access <br>
+
+                                        <i class="far fa-check-circle text-primary"></i> Management support<br>
+
+                                        <i class="far fa-check-circle text-primary"></i> Billed as shift
+                                    </small>
+                                </p>
+                                <a href="#"
+                                    class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-4"><small>Choose
+                                        plan</small></a>
+                                <span
+                                    class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger p-2">
+                                    Hot
+
+                                </span>
+                            </div>
                         </div>
-            
-                        <button type="submit" class="btn btn-outline-light  mt-2 ">Subscribe!</button>
-                    </form>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0 " id="hot-package">
+                            <div class="card-body">
+
+                                <h3 class="fw-bold">$800</h3>
+                                <h4 class="fw-bold">Enterprise</h4>
+                                <p>
+                                    <small> For most enterprise projects. <br> <br>
+                                        <i class="far fa-check-circle"></i> Full space access<br>
+                                        <i class="far fa-check-circle"></i> Dedicated team<br>
+
+                                        <i class="far fa-check-circle"></i> Premium Facilities<br>
+                                        <i class="far fa-check-circle"></i> Pay as plan
+
+                                    </small>
+                                </p>
+                                <a href="#"
+                                    class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center m-2"><small>Choose
+                                        plan</small></a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-            </section>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-    crossorigin="anonymous"></script>
+            </div>
+        </section>
+
+
+
+        <section style="height:300px my-5 "
+            class="rounded-3 d-flex justify-content-center align-items-center bg-warning mb-4" id="subscribe">
+            <div class="mt-5 mb-5">
+                <h2 class="text-white">Subscribe for Newsletter</h2>
+                <p class="text-white">Get updates on special offers and more</p>
+                <form>
+                    <div class="mb-1">
+
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Email">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-light  mt-2 ">Subscribe!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
 </body>
 
 </html>
-
-
 {% endblock %}
