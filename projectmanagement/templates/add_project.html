@@ -4,11 +4,10 @@
 
     
 {% if user.is_authenticated %}
+	<h1>Add Project...</h1>
+	<br/><br/>
 
-
-
-	<div class="form-group w-50 mx-auto">
-			<h1>Add Project...</h1>
+	<div class="form-group">
 <form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ form.media }}
