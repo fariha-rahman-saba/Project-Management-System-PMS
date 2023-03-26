@@ -8,12 +8,12 @@
 
 
 	<div class="form-group w-50 mx-auto">
-			<h1>Add Project...</h1>
+			<h1 class="mt-3">Add Project...</h1>
 <form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ form.media }}
 			{{ form.as_p }}
-			<button class="btn btn-secondary">Add</button>
+			<button class="btn btn-secondary mb-5">Add</button>
 	</div>
 
 	<script>
