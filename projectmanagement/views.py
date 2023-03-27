@@ -26,16 +26,21 @@ def LikeView(request, pk):
 class HomeView(ListView):
 	model = Project
 	template_name = 'home.html'
-	# cats = Category.objects.all()
-	# ordering = ['-project_date']
-	#ordering = ['-id']
 
 	def get_context_data(self, *args, **kwargs):
-		# cat_menu = Category.objects.all()
 		context = super(HomeView, self).get_context_data(*args, **kwargs)
-		# context["cat_menu"] = cat_menu
 		return context
 
+
+class ProjectVIew(ListView):
+	model = Project
+	template_name = 'project_home.html'
+	# ordering = ['-post_date']
+	ordering = ['-id']
+
+	def get_context_data(self, *args, **kwargs):
+		context = super(ProjectVIew, self).get_context_data(*args, **kwargs)
+		return context
 
 
 
@@ -45,7 +50,6 @@ class ProjectDetailView(DetailView):
 	template_name = 'project_details.html'
 
 	def get_context_data(self, *args, **kwargs):
-		cat_menu = Category.objects.all()
 		context = super(ProjectDetailView, self).get_context_data(*args, **kwargs)
 
 		stuff = get_object_or_404(Project, id=self.kwargs['pk'])
@@ -55,7 +59,6 @@ class ProjectDetailView(DetailView):
 		if stuff.likes.filter(id=self.request.user.id).exists():
 			liked = True
 
-		context["cat_menu"] = cat_menu
 		context["total_likes"] = total_likes
 		context["liked"] = liked
 		return context

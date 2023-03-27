@@ -4,7 +4,6 @@
 
     
 
-<h1>Edit Settings...</h1>
 <br/><br/>
 
 {{ user.profile.bio }}
@@ -12,7 +11,9 @@
 <br/><br/>
 
 
-<div class="form-group">
+<div class="form-group w-50 mx-auto">
+<h1>Edit Settings...</h1>
+
 	<form method="POST">
 		{% csrf_token %}
 		{{ form.as_p }}

@@ -1,14 +1,6 @@
 from django import forms
 from .models import Project, Comment
 
-#choices = [('coding', 'coding'), ('sports', 'sports'), ('entertainment', 'entertainment'),]
-# choices = Category.objects.all().values_list('name', 'name')
-
-# choice_list = []
-
-# for item in choices:
-# 	choice_list.append(item)
-
 
 class ProjectForm(forms.ModelForm):
 	class Meta:
@@ -21,7 +13,6 @@ class ProjectForm(forms.ModelForm):
 			'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
 			'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'elder', 'type': 'hidden'}),
 			#'author': forms.Select(attrs={'class': 'form-control'}),
-			# 'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
 			'body': forms.Textarea(attrs={'class': 'form-control'}),
 			'snippet': forms.Textarea(attrs={'class': 'form-control'}),
 		}

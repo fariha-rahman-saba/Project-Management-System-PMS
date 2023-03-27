@@ -5,8 +5,6 @@ from datetime import datetime, date
 from ckeditor.fields import RichTextField
 
 
-
-
 class Project(models.Model):
 	title = models.CharField(max_length=255)
 	header_image = models.ImageField(null=True, blank=True, upload_to="images/")
@@ -15,7 +13,6 @@ class Project(models.Model):
 	body = RichTextField(blank=True, null=True)
 	#body = models.TextField()
 	post_date = models.DateField(auto_now_add=True)
-	category = models.CharField(max_length=255, default='coding')
 	snippet = models.CharField(max_length=255)
 	likes = models.ManyToManyField(User, related_name='project_post')
 
