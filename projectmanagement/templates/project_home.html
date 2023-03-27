@@ -4,13 +4,13 @@
 
     
 
-<h1>Posts</h1>
+<h1>Projects</h1>
 
 <ul>
 {% for project in object_list %}
 	<li><a href="{% url 'project-detail' project.pk %}">{{ project.title }}</a> 
 
-		- {{ project.author.first_name }} {{ project.author.last_name }} -  
+		- {{ project.author.username }} | 
 		{{ project.post_date }} <small>
 
 		{% if user.is_authenticated %}	
@@ -22,7 +22,7 @@
 		{% endif %}
 
 	</small> <br/>
-	{{ project.snippet }}</li>
+	<!-- {{ project.snippet }}</li> -->
 {% endfor %}
 </ul>
 

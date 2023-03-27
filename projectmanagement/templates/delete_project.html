@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Delete Blog Post{% endblock %}
+{% block title %}Delete Project{% endblock %}
 {% block content %}
 
     
@@ -15,7 +15,7 @@
 			<form method="POST">
 				{% csrf_token %}
 				<strong>Are you sure?!</strong><br/><br/>
-				<button class="btn btn-secondary">Delete Post!</button>
+				<button class="btn btn-danger">Delete Project!</button>
 		</div>
 		{% else %}
 			You're not allowed here! (and you know it...)

@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('category', models.CharField(default='coding', max_length=255)),
                 ('snippet', models.CharField(max_length=255)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('likes', models.ManyToManyField(related_name='project_post', to=settings.AUTH_USER_MODEL)),
+                ('likes', models.ManyToManyField(related_name='project_like', to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.CreateModel(

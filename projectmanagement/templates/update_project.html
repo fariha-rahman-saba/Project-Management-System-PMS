@@ -4,12 +4,13 @@
 
     
 {% if user.is_authenticated %}
-	{% if user.id == Project.author.id %}
+	{% if user.id == project.author.id %}
 
-		<h1>Update Project...</h1>
 		<br/><br/>
 
 		<div class="form-group w-50 mx-auto">
+		<h1>Update Project...</h1>
+
 			<form method="POST">
 				{% csrf_token %}
 				{{ form.media }}
