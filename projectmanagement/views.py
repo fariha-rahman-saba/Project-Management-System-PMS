@@ -11,16 +11,16 @@ def about(request):
 
 
 def LikeView(request, pk):
-	Project = get_object_or_404(Project, id=request.Project.get('Project_id'))
+	project = get_object_or_404(Project, id=request.POST.get('project_id'))
 	liked = False
-	if Project.likes.filter(id=request.user.id).exists():
-		Project.likes.remove(request.user)
+	if project.likes.filter(id=request.user.id).exists():
+		project.likes.remove(request.user)
 		liked = False
 	else:
-		Project.likes.add(request.user)
+		project.likes.add(request.user)
 		liked = True
 
-	return HttpResponseRedirect(reverse('Project-detail', args=[str(pk)]))
+	return HttpResponseRedirect(reverse('project-detail', args=[str(pk)]))
 
 
 class HomeView(ListView):

@@ -63,7 +63,7 @@
         <ul class="navbar-nav me-auto mb-lg-0">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <button class="btn btn-outline-light ml-2" type="submit">Search</button>
           </form>
       
       
@@ -72,6 +72,9 @@
       
       </div>
 
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'project-view' %}">Projects</a>
+</li>
 
       {% if user.is_authenticated %}
         <li class="nav-item">
@@ -255,7 +258,7 @@
     
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-        © 2022 Copyright:
+        © 2023 Copyright:
         <a class="text-reset fw-bold" href="https://mdbootstrap.com/">argon.com.bd</a>
       </div>
       <!-- Copyright -->

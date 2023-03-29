@@ -4,28 +4,30 @@
 
     
 
-<h1>Projects</h1>
-
-<ul>
-{% for project in object_list %}
-	<li><a href="{% url 'project-detail' project.pk %}">{{ project.title }}</a> 
-
-		- {{ project.author.username }} | 
-		{{ project.post_date }} <small>
-
-		{% if user.is_authenticated %}	
-			{% if user.id == project.author.id %}
-				- <a href="{% url 'update_project' project.pk %}">(Edit)</a> 
-
+<div class="container">
+	<h1>Projects</h1>
+	
+	<ul>
+		{% for project in object_list %}
+		<li><a href="{% url 'project-detail' project.pk %}">{{ project.title }}</a>
+	
+			- {{ project.author.username }} |
+			{{ project.post_date }} <small>
+	
+				{% if user.is_authenticated %}
+				{% if user.id == project.author.id %}
+				- <a href="{% url 'update_project' project.pk %}">(Edit)</a>
+	
 				<a href="{% url 'delete_project' project.pk %}">(Delete)</a>
-			{% endif %}
-		{% endif %}
+				{% endif %}
+				{% endif %}
+	
+			</small> <br />
+			<!-- {{ project.snippet }}</li> -->
+			{% endfor %}
+	</ul>
 
-	</small> <br/>
-	<!-- {{ project.snippet }}</li> -->
-{% endfor %}
-</ul>
-
+</div>
 
 
 {% endblock %}
