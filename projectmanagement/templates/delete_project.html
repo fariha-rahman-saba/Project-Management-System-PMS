@@ -1,32 +1,58 @@
 {% extends 'base.html' %}
+
 {% block title %}Delete Project{% endblock %}
+
 {% block content %}
 
-    
 {% if user.is_authenticated %}
-	{% if user.id == project.author.id %}
-		
-
-		<br/>
-		<div class="form-group w-50 mx-auto">
-			<h1>Delete project...</h1>
-			<br /><br />
-			<h3>Delete: {{ project.title }}</h3>
-			<form method="POST">
-				{% csrf_token %}
-				<strong>Are you sure?!</strong><br/><br/>
-				<button class="btn btn-danger">Delete Project!</button>
+{% if user.id == project.author.id %}
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h1 class="text-center">Delete Project</h1>
+				</div>
+				<div class="card-body">
+					<h3 class="text-center">{{ project.title }}</h3>
+					<form method="POST">
+						{% csrf_token %}
+						<div class="form-group text-center">
+							<strong>Are you sure?</strong><br /><br />
+							<button class="btn btn-danger">Delete Project!</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		{% else %}
-			You're not allowed here! (and you know it...)
-		{% endif %}
-
+	</div>
+</div>
 {% else %}
-
-You're not allowed here! (and you know it...)
-
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-body">
+					You're not allowed here! (and you know it...)
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endif %}
 
-
+{% else %}
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-body">
+					You're not allowed here! (and you know it...)
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
 
 {% endblock %}
