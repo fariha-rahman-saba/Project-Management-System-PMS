@@ -10,7 +10,7 @@
 	<div class="w-50 mx-auto mt-3">
 		<h1>{{ project.title }}</h1>
 		<small>By:
-			{{ project.author.first_name }} project
+			{{ project.author.first_name }}
 			{{ project.author.last_name }} -
 			{{ project.post_date }}
 		
@@ -136,7 +136,7 @@
 		
 		
 		{% endfor %}
-		<a href="{% url 'add_comment' project.pk %}">Add Comment</a>
+		<a  href="{% url 'add_comment' project.pk %}">Add Comment</a>
 		{% endif %}
 		<br />
 		

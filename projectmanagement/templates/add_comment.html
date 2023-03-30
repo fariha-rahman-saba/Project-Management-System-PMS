@@ -1,16 +1,39 @@
 {% extends 'base.html' %}
+
 {% block title %}Comment On Project{% endblock %}
+
 {% block content %}
-
-
-	<div class="form-group w-50 mx-auto">
-		<h1>Add Comment...</h1>
-<form method="POST">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<button class="btn btn-secondary">Add Comment</button>
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-8 col-lg-6">
+			<div class="card shadow-lg">
+				<div class="card-body">
+					<h1 class="card-title text-center mb-4">Add Comment</h1>
+					<form method="POST" class="form">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<div class="text-center">
+							<button class="btn btn-primary mt-4">Add Comment</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 
+<style>
+	.card {
+		border: none;
+		border-radius: 0;
+	}
 
+	.card-title {
+		font-size: 2rem;
+	}
 
+	.form {
+		padding: 2rem;
+	}
+</style>
 {% endblock %}

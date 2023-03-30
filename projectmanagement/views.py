@@ -9,6 +9,9 @@ from django.http import HttpResponseRedirect
 def about(request):
 	return render(request, 'about.html', {})
 
+def review(request):
+	return render(request, 'review.html', {})
+
 
 def LikeView(request, pk):
 	project = get_object_or_404(Project, id=request.POST.get('project_id'))

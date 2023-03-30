@@ -3,8 +3,10 @@ from . import views
 from .views import HomeView, ProjectDetailView, AddProjectView, UpdateProjectView, DeleteProjectView,  LikeView, AddCommentView, ProjectVIew
 
 urlpatterns = [
-    path('about/', views.about, name="about"),
+    
     path('', HomeView.as_view(), name="home"),
+    path('about/', views.about, name="about"),
+    path('review/', views.review, name="review"),
     path('project_view/', ProjectVIew.as_view(), name="project-view"),
     path('project/<int:pk>', ProjectDetailView.as_view(), name='project-detail'),
     path('add_project/', AddProjectView.as_view(), name='add_project'),
