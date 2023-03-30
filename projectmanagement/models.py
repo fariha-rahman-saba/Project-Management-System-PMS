@@ -22,8 +22,7 @@ class Project(models.Model):
 		return self.title + ' | ' + str(self.author)
 
 	def get_absolute_url(self):
-		return reverse('project-detail', args=(str(self.id)) )
-		# return reverse('home')
+		return reverse('project-view')
 
 
 class Profile(models.Model):

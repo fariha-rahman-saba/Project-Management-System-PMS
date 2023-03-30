@@ -90,10 +90,9 @@ class UpdateProjectView(UpdateView):
 	model = Project
 	form_class = EditForm
 	template_name = 'update_project.html'
-	# fields = ['title', 'title_tag', 'body']
 
 
 class DeleteProjectView(DeleteView):
 	model = Project
 	template_name = 'delete_project.html'
-	success_url = reverse_lazy('home')
+	success_url = reverse_lazy('project-view')
