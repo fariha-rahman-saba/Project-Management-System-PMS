@@ -5,19 +5,6 @@
 
 <div class="container my-5">
     <h1 class="text-center mb-5">About Us</h1>
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Our Mission</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at faucibus sapien. Morbi molestie eros id
-                urna sollicitudin, sed elementum lorem malesuada. In vel bibendum nisi. Duis lacinia velit enim, sit
-                amet mollis urna fermentum et. Curabitur quis nulla urna. Donec ultricies hendrerit sem ac scelerisque.
-                Proin consectetur tortor et tellus bibendum dignissim.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'img/pms.jpg' %}" alt="About Us" class="img-fluid">
-        </div>
-    </div>
-    <hr>
     <div class="row my-5">
         <div class="col-md-6">
             <img src="{% static 'img/team.jpg' %}" alt="Our Team" class="img-fluid">
@@ -30,6 +17,23 @@
                 elementum lorem malesuada.</p>
         </div>
     </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>The mission of our website is to provide an efficient and user-friendly project management system that helps businesses
+            and teams streamline their project workflows. Our website is designed to help teams collaborate effectively, track
+            progress, and meet project deadlines with ease. By providing a centralized platform for managing tasks, milestones, and
+            deadlines, our website aims to eliminate the need for time-consuming manual tracking and reporting. Our mission is to
+            help teams increase productivity, improve communication, and ultimately achieve success by providing them with the tools
+            they need to manage their projects effectively.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/pms.jpg' %}" alt="About Us" class="img-fluid">
+        </div>
+    </div>
+    
 </div>
 
 {% endblock %}

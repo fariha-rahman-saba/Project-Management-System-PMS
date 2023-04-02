@@ -3,17 +3,22 @@
 {% block content %}
 
     
+		<h1 class="text-center mt-3 mb-5">Edit Profile Page</h1>
+		<div class="w-50 mx-auto">
+
+
 {% if user.is_authenticated %}
 	{% if user.id == profile.user.id %}
 	
-		<div class="container form-group w-50 mx-auto">
-		<h1>Edit Profile Page...</h1>
 
-	<form method="POST" enctype="multipart/form-data">
+	<form  method="POST" enctype="multipart/form-data">
 				{% csrf_token %}
 				{{ form.as_p }}
-				<button class="btn btn-secondary">Update Profile Page</button>
-				</form>
+<div class="text-center">
+				<button class="btn btn-info mb-5 mt-5">Update Profile Page</button>
+
+</div>
+			</form>
 
 		</div>
 

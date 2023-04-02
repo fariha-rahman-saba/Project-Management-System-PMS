@@ -4,17 +4,21 @@
 
     
 {% if user.is_authenticated %}
-	<br/><br/>
+		<h1 class="text-center mt-3 mb-5">Add Project</h1>
+
 
 	<div class="form-group w-50 mx-auto">
-	<h1>Add Project...</h1>
 
 <form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ form.media }}
 			{{ form.as_p }}
-			<button class="btn btn-secondary mb-5">Add</button>
-	</div>
+
+			<div class="text-center mt-5">
+			<button class="btn btn-warning w-50 mb-5">Add</button>
+
+			</div>
+		</div>
 
 	<script>
 		var name = "{{ user.id }}";
