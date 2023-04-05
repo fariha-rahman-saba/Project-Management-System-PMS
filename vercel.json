@@ -1,26 +1,21 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "pms/wsgi.py",
+      "src": "manage.py",
       "use": "@vercel/python",
-      "config": {"maxLambdaSize":"15mb", "runtime":"python3.9"}
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build"
-      
+      "config": {
+        "maxLambdaSize": "50mb",
+        "commands": [
+          "python manage.py collectstatic --noinput",
+          "python manage.py migrate --noinput"
+        ]
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "pms/wsgi.py"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "/manage.py"
     }
   ]
-  
 }
